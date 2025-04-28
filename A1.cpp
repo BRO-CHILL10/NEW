@@ -2,30 +2,24 @@
 using namespace std;
 int main()
 {
-    int N,X,i,A[100000];
-    cin>>N>>X;
-    for(i=0;i<N;i++)
-    {
-       cin>>A[i];
-
+    int T;
+    cin>>T;
+    while(T--){
+   int i,mx,n,a[100000];
+   cin>>n;
+   for(i=0;i<n;i++)
+   {
+       cin>>a[i];
+   }
+   mx=a[0];
+    for(i=0;i<n;i++)
+   {
+       if(a[i]>mx){
+       mx=a[i];
+   }}
+   cout<<mx<<endl;
     }
 
-
-    int f=0;
-    for(i=0;i<N;i++)
-    {
-       if(X==A[i]){
-        f=1;
-        break;}
-    }
-
-     if(f==1)
-     {
-         cout<<"YES";
-     }
-     else {
-        cout<<"NO";
-     }
-      return 0;
+   return 0;
 }
 
